@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-""" AdmaDama: Checkerboard Formation Ising Model """
+""" ADama: Checkerboard Formation Ising Model """
 
 # Author: Goktug Islamoglu
 # 2018- (c) Copyright by Goktug Islamoglu
@@ -40,6 +40,8 @@ p = 5 / 9  # Approximation to upper bound of 2nd order phase transition
 
 # p = float(0.5 - (1 / (2 * sqrt(2)))) #lower bound of 1st order phase transition
 # p = 0.1464466
+
+# p = (cos(π/8)+ cos^2(π/8)) /4 # best approximation to Onsager's 2D Ising Model Curie point
 
 ##
 # initializing randomly assigned states with probability p
@@ -138,7 +140,7 @@ def number_of_Moore_neighbors(x, y):
 
 
 def step():
-    global c, nc, array, array0, array1, count0, count1, o
+    global c, nc, array, array0, array1, count0, count1
     count0 = 0
     count1 = 0
     i = 0
