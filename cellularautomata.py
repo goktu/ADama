@@ -143,8 +143,6 @@ def step():
     global c, nc, array, array0, array1, count0, count1
     count0 = 0
     count1 = 0
-    i = 0
-    j = 0
     array = []
     array0 = []
     array1 = []
@@ -186,8 +184,7 @@ def step():
                         nc[(x - 1) % L, y] = 1
                     else:
                         nc[x, y] = 1
-            i += 1
-            j += g
+
     count0 = len(array0)  # total count of cells with value 0 in each step
     count1 = len(array1)  # total count of cells with value 1 in each step
 
