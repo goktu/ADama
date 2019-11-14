@@ -48,13 +48,12 @@ p = 5 / 9  # Approximation to upper bound of 2nd order phase transition
 
 
 def init():
-    global c, nc, o
+    global c, nc
     c = zeros([L, L])
     for x in xrange(L):
         for y in xrange(L):
             c[x, y] = 1 if random() < p else 0
     nc = zeros([L, L])
-    o = 0
 
 ##
 # visualizing the content of an array
