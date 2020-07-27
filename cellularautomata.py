@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-<<<<<<< HEAD
 """ Coupled Linear Ising Chain """
 
 __author__ = "Goktug Islamoglu"
@@ -27,9 +26,6 @@ __status__ = "Prototype"
     
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-=======
-""" ADama: Checkerboard Formation Ising Model """
->>>>>>> f1a94baf9f74450a6866639319fb04ff23d16589
 
 
 ##
@@ -69,36 +65,19 @@ L = 100  # size of space: LxL
 
 p = np.log(1+sqrt(2))/2 + 0.5*(sqrt(2)-1) #maximum 
 
-<<<<<<< HEAD
-=======
-# p = (cos(π/8)+ cos^2(π/8)) /4 # best approximation to Onsager's 2D Ising Model Curie point
-
-##
->>>>>>> f1a94baf9f74450a6866639319fb04ff23d16589
-# initializing randomly assigned states with probability p
-
-
 def init():
-<<<<<<< HEAD
     global c, nc, slope0, slope1, delta, o
-=======
-    global c, nc
->>>>>>> f1a94baf9f74450a6866639319fb04ff23d16589
     c = zeros([L, L])
     for x in xrange(L):
         for y in xrange(L):
             c[x, y] = 1 if random() < p else 0
     nc = zeros([L, L])
-<<<<<<< HEAD
     o = 0
     slope0 = []
     slope1 = []
     delta = []
-=======
->>>>>>> f1a94baf9f74450a6866639319fb04ff23d16589
 
 # visualizing the content of an array
-
 
 def draw():
     cla()
@@ -171,7 +150,6 @@ def number_of_Moore_neighbors(x, y):
 
 
 def step():
-<<<<<<< HEAD
     global c, nc, array, array0, array1, count, count0, count1, ratio, ratio1, slope0, slope1, delta, o
     count0 = 0
     count1 = 0
@@ -180,11 +158,6 @@ def step():
     ratio = 0
     i = 0
     j = 0
-=======
-    global c, nc, array, array0, array1, count0, count1
-    count0 = 0
-    count1 = 0
->>>>>>> f1a94baf9f74450a6866639319fb04ff23d16589
     array = []
     array0 = []
     array1 = []
@@ -228,18 +201,11 @@ def step():
                         nc[(x - 1) % L, y] = 1
                     else:
                         nc[x, y] = 1
-<<<<<<< HEAD
             i += 1
             j += g
     #count = len(array)
-    count0 = len(array0)
-    count1 = len(array1)
-=======
-
     count0 = len(array0)  # total count of cells with value 0 in each step
     count1 = len(array1)  # total count of cells with value 1 in each step
-
->>>>>>> f1a94baf9f74450a6866639319fb04ff23d16589
     print count1
     o += 1
     if o == 1:
@@ -259,7 +225,6 @@ def step():
         
         #cotangent generator #for coupling probabilities
         if ratio1 != 1:
-            print (1 / float(ratio1))
             #print (ratio3 / float(ratio1 * ratio1) + (1 / float(ratio1)) - ratio2)
             print (- ratio3 / float(ratio1 * ratio1) - (1 / float(ratio1)) + ratio2)
             
