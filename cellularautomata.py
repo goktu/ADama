@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-""" Coupled Linear Ising Chain """
+""" First-Order & Second-Order Phase Transitioning Ising Model """
 
 __author__ = "Goktug Islamoglu"
-__copyright__ = "Copyright 2020, Goktug Islamoglu"
+__copyright__ = "Copyright 2021, Goktug Islamoglu"
 __credits__ = "Goktug Islamoglu"
 __license__ = "GPL"
 __version__ = "1.0.1"
@@ -51,17 +51,26 @@ import numpy as np
 
 L = 100  # size of space: LxL
 
-#ferrimagnetic-transition phase
-#p = 0.5276973969625715285724233433631805779688537906314195417222751595 / 0.662743419349181580974742097109252907056233549115022417520392534990971853086
+#ferrimagnetic-ferromagnetic transition phase - ≈ 0.769   
+#p = 0.5 + np.log(1+sqrt(2))/2 - tan(pi/8)*tan(pi/8) 
 
-#Ising critical point best approximation
-#p = 0.66274341934918158097474209710925290*0.66274341934918158097474209710925290
+#ferromagnetic phase - maximum cell count with state "1", ≈ 0.6478  
+#p = np.log(1+sqrt(2))/2 + (tan(pi/8))/2 
 
-#p = float(0.5 + (1 / (2 * sqrt(2)))) # ferrimagnetic probability - coupled
-#p = 0.8536 #paramagnetic transition
+#p = float(0.5 + (1 / (2 * sqrt(2)))) # ferrimagnetic ground state - coupled, ≈ 0.8535
+#p = 0.8536 #first order transition, immediately above the ferrimagnetic ground state, demagnetization/degaussing 
 
-#p = float(0.5 - (1 / (2 * sqrt(2)))) # antiferromagnetic probability - coupled
-#p = 0.1464466 #paramagnetic transition
+#p = float(0.5 - (1 / (2 * sqrt(2)))) # antiferromagnetic ground state - coupled, ≈ 0.1464466
+#p = 0.1464465 #first order transition, immediately below the antiferromagnetic ground state, no magnetization
+
+#Inverse Ising critical temperature - paramagnetic phase, ≈ 0.4407 
+#p = np.log(1+sqrt(2))/2
+
+#Lower bound cotangent graph - "count 1" graph intersection point, ≈ 0.269   
+#p = np.log(1+sqrt(2))/2 - tan(pi/8)*tan(pi/8)
+
+#Upper bound cotangent graph - "count 1" graph intersection point, ≈ 0.828  
+#p = 2*tan(pi/8)
 
 p = np.log(1+sqrt(2))/2 + 0.5*(sqrt(2)-1) #maximum 
 
@@ -223,7 +232,7 @@ def step():
             (slope0[o - 2] / float(slope1[o - 2]))
         ratio3 = (delta[o - 2] - delta[o - 1]) / i
         
-        #cotangent generator #for coupling probabilities
+        #cotangent generator #for coupled and uncoupled probabilities
         if ratio1 != 1:
             #print (ratio3 / float(ratio1 * ratio1) + (1 / float(ratio1)) - ratio2)
             print (- ratio3 / float(ratio1 * ratio1) - (1 / float(ratio1)) + ratio2)
