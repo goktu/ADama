@@ -31,15 +31,36 @@ elif c[x,y] == 1:
         # block generation from randomly distributed points
         
         # neighbor updating from cell(x, y)
-        n = number_of_upper_neigbors(x, y)
-        if n == 1:
+        m = number_of_upper_neigbors(x, y)
+        if m == 1:
             nc[x, (y + 1) % L] = 1  
 ```
-Above code block only shows the driving motion for a cell's upper neighbors. The same is repeated for right and below neighbors, and for the left neighbor the only difference is the left neighboring cell's value being updated to zero, to simulate the departure from a car's position. 
-
 The search function is run over a Moore neighborhood, but the updated value corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim (clink on the image below to view the presentation).
 
 <a href="pdf/GoktugIslamoglu_NERCCS2021_Presentation.pdf" class="image fit" type="application/pdf"><img src="img/6_MooretoNeumann.png" alt=""></a>
+
+Above code block only shows the driving motion for a cell's upper neighbors, if a cell's value is 1. The same is repeated for below neighbors. For right and left neighbors, the only difference is the adjustment based on the occupancy of upper and lower neighborhoods. Right neighboring cell's value is updated to one, while the left neighboring cell's value is updated to zero, to simulate the departure from a car's position. 
+
+### Moore to von Neumann Shift
+
+```markdown
+# neighbor updating from cell(x, y)
+m = number_of_upper_neigbors(x, y)
+if m == 1:
+    nc[x, (y + 1) % L] = 1  
+        
+n = number_of_lower_neigbors(x, y)
+if n == 1:
+    nc[x, (y - 1) % L] = 1    
+        
+k = number_of_right_neigbors(x, y)
+if k == 0 and (m <= 1 or n <= 1):
+    nc[(x + 1) % L , (y + z) % L] = 1
+        
+l = number_of_left_neigbors(x, y)
+if l == 0 and (m > 1 or n > 1):
+    nc[(x - 1) % L , (y + z) % L] = 0     
+```
 
 ```markdown
 Syntax highlighted code block
