@@ -6,6 +6,10 @@ Dama means checkerboard in Turkish. The hypothetical optimal car formation in a 
 
 ADama is a nod to one of my favorite shows, [Battlestar Galactica](https://www.youtube.com/watch?v=evodPpqb9H4). 
 
+A cellular automaton is a search function around a cell. The conventional update rule is based on the cell values in its neighborhood.
+
+<img src="img/2_CAupdate.png" alt="hi" class="inline"/>
+
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
