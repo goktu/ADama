@@ -14,7 +14,7 @@ There is an inherent attraction and repulsion between two cars in a lane. The ta
 
 <img src="img/3_drivingAR.png" alt="hi" class="inline"/>
 
-I hypothesize this attraction-repulsion between two cars in a lane is a **long-range dipole interaction** in the driving direction, and in its normal direction the lane merging, the **dipole vanishes**.
+I hypothesize this attraction-repulsion between two cars in a lane is a **long-range dipole interaction** in the driving direction. In the normal direction of driving, with the lane merging the **dipole vanishes**.
 
 In order to simulate the act of driving in a CA, I had to inverse the update rule to initiate the motion from a cell, as it is the case with a car. A car is similar to a free radical.  
 
