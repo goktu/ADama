@@ -6,7 +6,7 @@ Dama means checkerboard in Turkish. The hypothetical optimal car formation in a 
 
 ADama is a nod to one of my favorite shows, [Battlestar Galactica](https://www.youtube.com/watch?v=evodPpqb9H4). 
 
-A cellular automaton (CA) is a search function around a cell. The conventional update rule is based on the cell values in a cell's neighborhood.
+A cellular automaton (CA) is a search function around a cell. The conventional update rule is based on the cell states in a cell's neighborhood.
 
 <img src="img/2_CAupdate.png" alt="hi" class="inline"/>
 
@@ -37,11 +37,11 @@ elif c[x,y] == 1:
 ```
 <img src="img/5_MoorevonNeumann.png" alt="hi" class="inline"/>
 
-The search function is run over a Moore neighborhood, but the updated value corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim (clink on the image below to view the presentation).
+The search function is run over a Moore neighborhood, but the updated state corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim (clink on the image below to view the presentation).
 
 <a href="pdf/GoktugIslamoglu_NERCCS2021_Presentation.pdf" class="image fit" type="application/pdf"><img src="img/6_MooretoNeumann.png" alt=""></a>
 
-Above code block only shows the driving motion for a cell's upper neighbors, if a cell's value is 1. The same is repeated for below neighbors. For right and left neighbors, the only difference is the adjustment based on the occupancy of upper and lower neighborhoods. Right neighboring cell's value is updated to one, while the left neighboring cell's value is updated to zero, to simulate the departure from a car's position. 
+Above code block only shows the driving motion for a cell's upper neighbors, if a cell's state is 1. The same is repeated for below neighbors. For right and left neighbors, the only difference is the adjustment based on the occupancy of upper and lower neighborhoods. Right neighboring cell's state is updated to one, while the left neighboring cell's state is updated to zero, to simulate the departure from a car's position. 
 
 ### Moore to von Neumann Shift
 
@@ -78,6 +78,8 @@ if h >= 1:
     nc[x, y] = 1 if g <= 6 else 0
 ```
     
+While for 4-4 and 5-5 tuning, the maximum total count of cells with state 1 in the grid is the inverse Ising critical temperature. For 6-6 tuning, however, the maximum count corresponds to a higher value. The exact value is investigated in the presentation.
+
 
 
 
