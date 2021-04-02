@@ -67,6 +67,8 @@ Next step is tuning the neighborhood for an optimal configuration. To achieve th
 
 <img src="img/7_tuning.png" alt="hi" class="inline"/>
 
+### Moore and von Neumann Tuning
+
 ```markdown
 g = number_of_Moore_neigbors(x, y) #CA tuning
 if c[x, y] == 0:
@@ -80,7 +82,9 @@ if h >= 1:
     
 While for 4-4 and 5-5 tuning, the maximum total count of cells with state 1 in the grid is the inverse Ising critical temperature. For 6-6 tuning, however, the maximum count corresponds to a higher value. The exact value is investigated in the presentation.
 
+<img src="img/8_isingferro.png" alt="hi" class="inline"/>
 
+### Coupling Function
 
 
 ```markdown
