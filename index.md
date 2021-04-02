@@ -68,22 +68,16 @@ Next step is tuning the neighborhood for an optimal configuration. To achieve th
 <img src="img/7_tuning.png" alt="hi" class="inline"/>
 
 ```markdown
-# neighbor updating from cell(x, y)
-m = number_of_upper_neigbors(x, y)
-if m == 1:
-    nc[x, (y + 1) % L] = 1  
-        
-n = number_of_lower_neigbors(x, y)
-if n == 1:
-    nc[x, (y - 1) % L] = 1    
-        
-k = number_of_right_neigbors(x, y)
-if k == 0 and (m <= 1 or n <= 1):
-    nc[(x + 1) % L , (y + z) % L] = 1
-        
-l = number_of_left_neigbors(x, y)
-if l == 0 and (m > 1 or n > 1):
-    nc[(x - 1) % L , (y + z) % L] = 0    
+g = number_of_Moore_neigbors(x, y) #CA tuning
+if c[x, y] == 0:
+    nc[x, y] = 0 if g <= 6 else 1
+    array0.append(c[x, y])
+    
+h = number_of_Neumann_neigbors(x, y) #CA tuning
+if h >= 1:
+    nc[x, y] = 1 if g <= 6 else 0
+```
+    
 
 
 
