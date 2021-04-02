@@ -18,6 +18,8 @@ I hypothesize this attraction-repulsion between two cars in a lane is a **long-r
 
 In order to simulate the act of driving in a CA, I had to inverse the update rule to initiate the motion from a cell, as it is the case with a car. A driver decides the destination.
 
+<img src="img/4_inverseCA.png" alt="hi" class="inline"/>
+
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
