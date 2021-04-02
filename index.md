@@ -6,9 +6,15 @@ Dama means checkerboard in Turkish. The hypothetical optimal car formation in a 
 
 ADama is a nod to one of my favorite shows, [Battlestar Galactica](https://www.youtube.com/watch?v=evodPpqb9H4). 
 
-A cellular automaton is a search function around a cell. The conventional update rule is based on the cell values in its neighborhood.
+A cellular automaton (CA) is a search function around a cell. The conventional update rule is based on the cell values in a cell's neighborhood.
 
 <img src="img/2_CAupdate.png" alt="hi" class="inline"/>
+
+There is an inherent attraction and repulsion between two cars in a lane. The tailing car is aiming to move forward into the front car's current position in the next time frame. However, the car in the back needs to leave a trailing distance to avoid crashing into the front. This is akin to a repulsion force.
+
+<img src="img/3_drivingAR.png" alt="hi" class="inline"/>
+
+In order to simulate the act of driving in a CA, I had to inverse the update rule to initiate the motion from a cell, as it is the case with a car. A car is similar to a free radical.  
 
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
