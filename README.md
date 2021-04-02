@@ -6,9 +6,10 @@ Written by: Goktug Islamoglu
 goktugislamoglu@gmail.com
 
 ## Written in Python 2.7
+Requires: PyCX Simulator
 
-Requires: PyCX simulator
-License: GNU Public License (GPL-3.0)
+## License: 
+GNU Public License (GPL-3.0)
 
 ## Built on: PyCX 0.3 Realtime Visualization Template
 
