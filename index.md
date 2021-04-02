@@ -1,6 +1,6 @@
 ## ADama Model
 
-Dama means checkerboard in Turkish. 
+Dama means checkerboard in Turkish. ADama is a nod to one of my favorite shows, [Battlestar Galactica](https://www.youtube.com/watch?v=sjgG_f35vZY). 
 
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
