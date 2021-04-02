@@ -35,6 +35,8 @@ elif c[x,y] == 1:
         if m == 1:
             nc[x, (y + 1) % L] = 1  
 ```
+<img src="img/5_MoorevonNeumann.png" alt="hi" class="inline"/>
+
 The search function is run over a Moore neighborhood, but the updated value corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim (clink on the image below to view the presentation).
 
 <a href="pdf/GoktugIslamoglu_NERCCS2021_Presentation.pdf" class="image fit" type="application/pdf"><img src="img/6_MooretoNeumann.png" alt=""></a>
@@ -61,6 +63,29 @@ l = number_of_left_neigbors(x, y)
 if l == 0 and (m > 1 or n > 1):
     nc[(x - 1) % L , (y + z) % L] = 0     
 ```
+Next step is tuning the neighborhood for an optimal configuration. For this, occupancy ranges for Moore and von Neumann neighborhoods are added.
+
+<img src="img/7_tuning.png" alt="hi" class="inline"/>
+
+```markdown
+# neighbor updating from cell(x, y)
+m = number_of_upper_neigbors(x, y)
+if m == 1:
+    nc[x, (y + 1) % L] = 1  
+        
+n = number_of_lower_neigbors(x, y)
+if n == 1:
+    nc[x, (y - 1) % L] = 1    
+        
+k = number_of_right_neigbors(x, y)
+if k == 0 and (m <= 1 or n <= 1):
+    nc[(x + 1) % L , (y + z) % L] = 1
+        
+l = number_of_left_neigbors(x, y)
+if l == 0 and (m > 1 or n > 1):
+    nc[(x - 1) % L , (y + z) % L] = 0    
+
+
 
 ```markdown
 Syntax highlighted code block
