@@ -14,6 +14,8 @@ There is an inherent attraction and repulsion between two cars in a lane. The ta
 
 <img src="img/3_drivingAR.png" alt="hi" class="inline"/>
 
+I hypothesize this attraction-repulsion between two cars in a lane is a <b>dipole</b> in the driving direction, and in its normal direction the lane merging, there is a <b>non-dipole</b> present.
+
 In order to simulate the act of driving in a CA, I had to inverse the update rule to initiate the motion from a cell, as it is the case with a car. A car is similar to a free radical.  
 
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
