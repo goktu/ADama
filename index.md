@@ -78,32 +78,26 @@ if c[x, y] == 0:
 h = number_of_Neumann_neigbors(x, y) #CA tuning
 if h >= 1:
     nc[x, y] = 1 if g <= 6 else 0
-```
-    
+``` 
 While for 4-4 and 5-5 tuning, the maximum total count of cells with state 1 in the grid is the inverse Ising critical temperature. For 6-6 tuning, however, the maximum count corresponds to a higher value. The exact value is investigated in the presentation.
 
 <img src="img/8_isingferro.png" alt="hi" class="inline"/>
 
+The last part of the rule is coupling the cells to their neighborhoods. This is necessary for simulating driving as a car's speed must be maintained relatively to the cars' speed in their front and on the adjacent lanes.  
+
 ### Coupling Function
 
-
 ```markdown
-Syntax highlighted code block
+if g / 8 > (1 - p) * p: # coupling function
+    nc[(x + 1) % L, y] = 1
+elif g / 8 < (1 - p) * p:
+    nc[(x - 1) % L, y] = 1    
+else:
+    nc[x, y] = 1
 
-# Header 1
-## Header 2
-### Header 3
+_Cellular automata coupling function obtained from:_
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+[Paper](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.58.R8)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
+The roots of this coupling equation are the first-order phase transition points.
