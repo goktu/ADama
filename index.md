@@ -22,21 +22,21 @@ In order to simulate the act of driving in a CA, I had to inverse the update rul
 
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-### Driving Dipole Code
+### Driving Dipole Code Block
 
 ```markdown
-Syntax highlighted code block
-
 elif c[x,y] == 1:
     array1.append(c[x, y])
     for z in range(-1, 2):
-        ## block generation from randomly distributed points
+        # block generation from randomly distributed points
         
-        ## neighbor updating from cell(x, y)
+        # neighbor updating from cell(x, y)
         n = number_of_upper_neigbors(x, y)
         if n == 1:
             nc[x, (y + 1) % L] = 1  
 ```
+Above code block only shows the driving motion for a cell's upper neighbors. The same is repeated for right and below neighbors, and for the left neighbor the only difference is the left neighboring cell's value being updated to zero, to simulate the departure from a car's position. 
+
 
 ```markdown
 Syntax highlighted code block
