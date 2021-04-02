@@ -37,6 +37,9 @@ elif c[x,y] == 1:
 ```
 Above code block only shows the driving motion for a cell's upper neighbors. The same is repeated for right and below neighbors, and for the left neighbor the only difference is the left neighboring cell's value being updated to zero, to simulate the departure from a car's position. 
 
+The search function is run over a Moore neighborhood, but the updated value corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim.
+
+<a href="/pdf/GoktugIslamoglu_NERCCS2021_Presentation.pdf" class="image fit"><img src="img/6_MooretoNeumann.png" alt=""></a>
 
 ```markdown
 Syntax highlighted code block
