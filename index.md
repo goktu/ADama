@@ -20,8 +20,6 @@ In order to simulate the act of driving in a CA, I had to inverse the update rul
 
 <img src="img/4_inverseCA.png" alt="hi" class="inline"/>
 
-You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
 ### Driving Dipole Code Block
 
 ```markdown
