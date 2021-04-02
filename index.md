@@ -2,6 +2,8 @@
 
 Dama means checkerboard in Turkish. The hypothetical optimal car formation in a 3x3 grid is a checkerboard, allowing a car to move forward and merge sideways without any disruption to the flow. 
 
+[Checkerboard Formation](https://github.com/goktu/ADama/blob/master/img/1_checker.png)
+
 ADama is a nod to one of my favorite shows, [Battlestar Galactica](https://www.youtube.com/watch?v=evodPpqb9H4). 
 
 You can use the [editor on GitHub](https://github.com/goktu/ADama/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
