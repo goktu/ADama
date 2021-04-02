@@ -63,7 +63,7 @@ l = number_of_left_neigbors(x, y)
 if l == 0 and (m > 1 or n > 1):
     nc[(x - 1) % L , (y + z) % L] = 0     
 ```
-Next step is tuning the neighborhood for an optimal configuration. For this, occupancy ranges for Moore and von Neumann neighborhoods are added.
+Next step is tuning the neighborhood for an optimal configuration. To achieve this, limits to Moore and von Neumann neighborhood occupancies are added.
 
 <img src="img/7_tuning.png" alt="hi" class="inline"/>
 
