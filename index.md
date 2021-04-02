@@ -95,9 +95,9 @@ elif g / 8 < (1 - p) * p:
 else:
     nc[x, y] = 1
 
-_Cellular automata coupling function obtained from:_
+_Cellular automata coupling function obtained from the paper below:_
 
-[Paper](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.58.R8)
+[Link](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.58.R8)
 ```
 
 The roots of this coupling equation are the first-order phase transition points.
