@@ -29,7 +29,7 @@ __status__ = "Prototype"
 
 
 ##
-#Built on: PyCX 0.3 Realtime Visualization Template
+# Built on: PyCX 0.3 Realtime Visualization Template
 #    
 # Source:
 # http://pycx.sourceforge.net/
