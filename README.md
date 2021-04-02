@@ -1,1 +1,1 @@
-# ADama - First-Order & Second-Order Phase Transitioning Ising Model 
+# ADama - First & Second-Order Phase Transitioning Ising Model 
