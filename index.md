@@ -1,8 +1,10 @@
 ## ADama Model
 
-Dama means checkerboard in Turkish. The hypothetical optimal car formation in a 3x3 grid is a checkerboard, allowing a car to move forward and merge sideways without any disruption to the flow. 
+Dama means checkerboard in Turkish. The hypothetical optimal car formation in a 3x3 grid is a checkerboard, allowing a car to move forward and merge sideways without any disruption to the flow.
 
-<img src="img/1_checker.png" alt="hi" class="inline"/>
+**[Click on the image below to view my traffic research compilation]**
+
+<a href="pdf/GoktugIslamoglu_CongestionSafety_Presentation_Part1.pdf" class="image fit" type="application/pdf"><img src="img/1_checker.png" alt=""></a>
 
 ADama is a nod to one of my favorite shows, [Battlestar Galactica](https://www.youtube.com/watch?v=evodPpqb9H4). 
 
@@ -35,7 +37,9 @@ elif c[x,y] == 1:
 ```
 <img src="img/5_MoorevonNeumann.png" alt="hi" class="inline"/>
 
-The search function is run over a Moore neighborhood, but the updated state corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim **[click on the image below to view the presentation]**.
+The search function is run over a Moore neighborhood, but the updated state corresponds to the von Neumann neighbor of a cell. Both neighborhoods are shown above. This is to collect a Moore neighborhood into a von Neumann one. It is hypothesized that this Moore-to-von Neumann shift is a renormalization by decimation and the NERCCS 2021 poster presentation explores a mathematical verification for this claim. 
+
+**[Click on the image below to view NERCCS 2021 poster presentation]**
 
 <a href="pdf/GoktugIslamoglu_NERCCS2021_Presentation.pdf" class="image fit" type="application/pdf"><img src="img/6_MooretoNeumann.png" alt=""></a>
 
