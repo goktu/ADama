@@ -81,7 +81,7 @@ h = number_of_Neumann_neigbors(x, y) #CA tuning
 if h >= 1:
     nc[x, y] = 1 if g <= 6 else 0
 ``` 
-While for 4-4 and 5-5 tuning, the maximum total count of cells with state 1 in the grid is the inverse Ising critical temperature. For 6-6 tuning, however, the maximum count corresponds to a higher value. The exact value is investigated in the presentation.
+While for 4-4 and 5-5 tuning, the maximum total count of cells with state 1 in the grid is the inverse Ising critical temperature. For 6-6 tuning however, the maximum count corresponds to a higher value, by magnetizing from a paramagnetic state to a ferromagnetic state. The exact value is investigated in the presentation.
 
 <img src="img/8_isingferro.png" alt="hi" class="inline"/>
 
@@ -104,3 +104,12 @@ _Cellular automata coupling function obtained from the paper below:_
 
 
 The roots of this coupling equation are the first-order phase transition points.
+
+Magnetized traffic flow loses its symmetry, and thus, enters a metastable phase.
+
+<img src="img/9_ferromagnetic_road.png" alt="hi" class="inline"/>
+
+
+[ResearchGate Page](https://www.researchgate.net/profile/Goktug-Islamoglu)
+
+[Cellular Automaton Source Code](https://github.com/goktu/ADama)
