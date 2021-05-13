@@ -84,8 +84,9 @@ if h >= 1:
 While for 4-4 and 5-5 tuning, the maximum total count of cells with state 1 in the grid is the inverse Ising critical temperature. For 6-6 tuning however, the maximum count corresponds to a higher value, by magnetizing from a paramagnetic state to a ferromagnetic state. The exact value is investigated in the presentation.
 
 <img src="img/8_isingferro.png" alt="hi" class="inline"/>
+<img src="img/9_ferromagnetic_road.png" alt="hi" class="inline"/>
 
-The last part of the rule is coupling the cells to their neighborhoods. This is necessary for simulating driving as a car's speed must be maintained relatively to the cars' speed in their front and on the adjacent lanes.  
+The last part of the rule is coupling the cells to their neighborhoods. This is necessary for simulating driving as a car's speed must be maintained relatively to the cars' speed in their front and on the adjacent lanes. Magnetized traffic flow loses its symmetry, and thus, enters a metastable phase.  
 
 ### Coupling Function
 
@@ -104,11 +105,6 @@ _Cellular automata coupling function obtained from the paper below:_
 
 
 The roots of this coupling equation are the first-order phase transition points.
-
-Magnetized traffic flow loses its symmetry, and thus, enters a metastable phase.
-
-<img src="img/9_ferromagnetic_road.png" alt="hi" class="inline"/>
-
 
 [ResearchGate Page](https://www.researchgate.net/profile/Goktug-Islamoglu)
 
