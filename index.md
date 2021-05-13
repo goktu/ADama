@@ -104,7 +104,12 @@ _Cellular automata coupling function obtained from the paper below:_
 [Synchronization of stochastically coupled cellular automata](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.58.R8)
 
 
-The roots of this coupling equation are the first-order phase transition points.
+The roots of this coupling equation are the first-order phase transition points. The magnetization coincides to the second-order transition.
+In this model, both first-order and second-order phase transitions coexist.
+
+<img src="img/10_firstsecondorder.png" alt="hi" class="inline"/>
+
+
 
 [ResearchGate Page](https://www.researchgate.net/profile/Goktug-Islamoglu)
 
